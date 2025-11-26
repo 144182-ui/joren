@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sinterklaas Verrassing</title>
+        <link rel="stylesheet" href="css.css">
+        <script src="Java.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <h1>Sinterklaas 2025</h1>
+            <p class="subtitle">een leuke zoekopdracht voor een code....</p>
+        </header> 
+        <main class="container">
+            <section class="card">
+                <h1>Welkom op de Sinterklaas 2025 website!</h1>
+                <div>Ha die Channa,<br> zo te zien heb je de site gevonden!</div>
+                <div>Nu is het de bedoeling dat je gaat zoeken naar een briefje met jou naam erop.</div>
+                <div>Als je die hebt gevonden, moet je die laten zien aan Joren en dan mag je die code invullen. <br>
+                Als de code goed is mag je je cadeau openmaken.</div>
+                <div>succes!</div>
+                <br>
+                <button id="startSearch" class="btn">Ik ga zoeken!</button>
+            </section>  
+        </main> 
+        <main class="container">
+            <section class="card">
+                <h2>Hint knop en geheime code</h2>
+                <p>Klik op de knop hieronder om een kleine hint te zien. Als je de envelop hebt gevonden, kun je met de knop "Toon code" de geheime code zien die je nodig hebt om het cadeau te claimen.</p>
+                <div class="actions">
+                    <button id="showHint" class="btn outline 1">Bekijk hint 1</button>
+                    <button id="showHint 2" class="btn outline 2">Bekijk hint 2</button>
+                    <button id="openCode" class="btn primary">Toon code</button>
+                </div>
+            </section>
+        </main>
+        <!-- Modal voor code -->
+        <div id="modal" class="modal" aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true">
+            <button class="close" id="closeModal" aria-label="Sluit">&times;</button>
+            <h3>Geheime code</h3>
+            <p class="code" id="giftCode">##SINTERKLAAS2025##</p>
+            <button id="copyCode" class="btn">Kopieer code</button>
+            <p>Gebruik deze code om je cadeau te krijgen. Bewaar hem goed!</p>
+            </div>
+        </div>
+
+        <!-- eenvoudige hint-popup -->
+        <div id="hintBox" class="hint 1" aria-hidden="true">
+            <p>Hint: misschien zijn er wel meerdere codes....</p>
+            <button id="closeHint" class="btn small">Sluit</button>
+        </div>
+                <div id="hintBox 2" class="hint 2" aria-hidden="true">
+            <p>Hint: misschien zijn er wel meerdere codes!!!...</p>
+            <button id="closeHint" class="btn small">Sluit</button>
+        </div>
+            <!-- CODE INVOER -->
+            <main class="container">
+              <section class="card">
+                <h2>Voer de geheime code in</h2>
+                <p>Vul hier de code in die je hierboven hebt gezien.</p>
+                <input type="text" id="codeInput" placeholder="Voer code in" style="padding:8px; width:100%; max-width:320px; margin-top:8px;">
+                <div style="margin-top:8px;">
+                  <button id="submitCode" class="btn">Verstuur</button>
+                </div>
+                <p id="result" aria-live="polite" style="margin-top:10px; font-weight:600;"></p>
+              </section>
+            </main>
+    </body>
+</html>
